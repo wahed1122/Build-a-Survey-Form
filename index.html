@@ -1,0 +1,68 @@
+  
+  <head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+  <h1 id="title">Survey Form</h1>
+  <p id="description">Quick Google Analytics Survey</p>
+  
+    <form id="survey-form">
+      <div class="form-group">
+      <label id="name-label" for="name">Name:</label>
+      <input id="name" type="text" required placeholder="Enter your first name">
+      <span class="validity"></span>
+      </div>      
+      
+      <div class="form-group">
+      <label id="email-label" for="email">Email:</label>
+      <input id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required placeholder="Enter your email">
+      <span class="validity"></span>
+      </div>
+     
+      <div class="form-group">
+      <label id="number-label" for="number">Your Age:</label>
+      <input id="number" type="number" min="10" max="99" step="1" required placeholder="Age">
+      <span class="validity"></span> 
+      </div>
+     
+      <div class="form-group">      
+      <label id="role-label" for="dropdown">What is your current role:</label>
+      <select id="dropdown" name="current-role">
+        <option value="" disabled selected>Select an option</option>
+        <option value="student">Student</option>
+        <option value="blogger">Blogger/Hobbiest</option>
+        <option value="smb">Small Business Owner</option>
+        <option value="agency">Agency</option>
+        <option value="other">Other</option>
+      </select>
+      </div>
+     
+      <div class="form-group">       
+      <p>Would you recommend Google Analytics to a friend or colleague:</p>
+      <div class="input-group">
+        <label for="yes"><input id="yes" type="radio" name="user-rating" value="yes" checked> Yes</label>
+        <label for="no"><input id="no" type="radio" name="user-rating" value="no"> No</label>
+        <label for="unsure"><input id="unsure" type="radio" name="user-rating" value="notsure"> Not sure</label>
+      </div>
+      </div>
+     
+      <div class="form-group">       
+      <p>Features you'd like to see in the future<br>(Check all that apply)</p>
+      <div class="input-group">
+        <label><input type="checkbox" name="improvements" value="events"> Events as conversion funnel steps</label>
+        <label><input type="checkbox" name="improvements" value="widgets"> Create dashboard widgets from standard reports</label>
+        <label><input type="checkbox" name="improvements" value="neglookaheads"> Negative lookaheads for filters</label>
+        <label><input type="checkbox" name="improvements" value="keywords"> Organic search keywords in reports</label>
+      </div>
+      </div>
+     
+      <div class="form-group">
+      <label id="textarea-label" for="comments">Comments and suggestions:</label>
+      <textarea id="comments" placeholder="Enter your comments here ..."  cols="30" rows="5"></textarea>
+      </div>
+     
+      <div class="form-group">
+      <input id="submit" class="button" type="submit" value="Submit">
+      </div>
+    </form>
